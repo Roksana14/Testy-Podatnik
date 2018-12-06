@@ -1,0 +1,12 @@
+C:\Users\ksian\source\repos\pit 11\pit 11\bin\Debug\pit 11.exe.config
+C:\Users\ksian\source\repos\pit 11\pit 11\bin\Debug\pit 11.exe
+C:\Users\ksian\source\repos\pit 11\pit 11\bin\Debug\pit 11.pdb
+C:\Users\ksian\source\repos\pit 11\pit 11\bin\Debug\WebDriver.dll
+C:\Users\ksian\source\repos\pit 11\pit 11\bin\Debug\WebDriver.Support.dll
+C:\Users\ksian\source\repos\pit 11\pit 11\bin\Debug\WebDriver.xml
+C:\Users\ksian\source\repos\pit 11\pit 11\bin\Debug\WebDriver.Support.xml
+C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.csprojAssemblyReference.cache
+C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.csproj.CoreCompileInputs.cache
+C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.csproj.CopyComplete
+C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.exe
+C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.pdb
