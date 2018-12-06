@@ -1,0 +1,12 @@
+C:\Users\ksian\source\repos\podatnik\podatnik\bin\Debug\podatnik.exe.config
+C:\Users\ksian\source\repos\podatnik\podatnik\bin\Debug\podatnik.exe
+C:\Users\ksian\source\repos\podatnik\podatnik\bin\Debug\podatnik.pdb
+C:\Users\ksian\source\repos\podatnik\podatnik\bin\Debug\WebDriver.dll
+C:\Users\ksian\source\repos\podatnik\podatnik\bin\Debug\WebDriver.Support.dll
+C:\Users\ksian\source\repos\podatnik\podatnik\bin\Debug\WebDriver.xml
+C:\Users\ksian\source\repos\podatnik\podatnik\bin\Debug\WebDriver.Support.xml
+C:\Users\ksian\source\repos\podatnik\podatnik\obj\Debug\podatnik.csprojAssemblyReference.cache
+C:\Users\ksian\source\repos\podatnik\podatnik\obj\Debug\podatnik.csproj.CoreCompileInputs.cache
+C:\Users\ksian\source\repos\podatnik\podatnik\obj\Debug\podatnik.csproj.CopyComplete
+C:\Users\ksian\source\repos\podatnik\podatnik\obj\Debug\podatnik.exe
+C:\Users\ksian\source\repos\podatnik\podatnik\obj\Debug\podatnik.pdb
