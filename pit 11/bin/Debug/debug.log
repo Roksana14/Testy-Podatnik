@@ -4,3 +4,34 @@
 [1206/192213.724:ERROR:exception_snapshot_win.cc(88)] thread ID 4340 not found in process
 [1207/091229.982:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
 [1207/091229.998:ERROR:exception_snapshot_win.cc(88)] thread ID 6780 not found in process
+<<<<<<< HEAD
+=======
+[1208/011439.183:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1208/011439.186:ERROR:exception_snapshot_win.cc(88)] thread ID 6428 not found in process
+[1208/224309.362:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1208/224309.364:ERROR:exception_snapshot_win.cc(88)] thread ID 4060 not found in process
+[1208/224522.746:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1208/224522.747:ERROR:exception_snapshot_win.cc(88)] thread ID 16896 not found in process
+[1208/232514.987:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1208/232514.988:ERROR:exception_snapshot_win.cc(88)] thread ID 8548 not found in process
+[1208/235427.781:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1208/235427.782:ERROR:exception_snapshot_win.cc(88)] thread ID 5124 not found in process
+[1209/001204.294:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/001204.295:ERROR:exception_snapshot_win.cc(88)] thread ID 9700 not found in process
+[1209/003552.393:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/003552.394:ERROR:exception_snapshot_win.cc(88)] thread ID 6064 not found in process
+[1209/015214.725:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/015214.726:ERROR:exception_snapshot_win.cc(88)] thread ID 1512 not found in process
+[1209/015540.702:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/015540.703:ERROR:exception_snapshot_win.cc(88)] thread ID 9876 not found in process
+[1209/015949.385:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/015949.385:ERROR:exception_snapshot_win.cc(88)] thread ID 14520 not found in process
+[1209/020755.316:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/020755.317:ERROR:exception_snapshot_win.cc(88)] thread ID 8872 not found in process
+[1209/023244.922:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/023244.923:ERROR:exception_snapshot_win.cc(88)] thread ID 7140 not found in process
+[1209/025226.749:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/025226.750:ERROR:exception_snapshot_win.cc(88)] thread ID 5136 not found in process
+[1209/034158.576:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1209/034158.580:ERROR:exception_snapshot_win.cc(88)] thread ID 15928 not found in process
+>>>>>>> db5f900ab29f19c7cca20ff0e1ee39775890c311
