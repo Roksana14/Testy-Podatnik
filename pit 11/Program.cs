@@ -1,8 +1,9 @@
-﻿
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Threading;
+
 
 class Pit11
 {
@@ -17,6 +18,8 @@ class Pit11
 	static IWebElement urzędy;
 	static IWebElement button;
 	static IWebElement checkbox;
+	
+
 
 
 	static void Main()
@@ -104,8 +107,6 @@ class Pit11
 		if (zielonaFajka.Displayed)
 		{
 			Console.WriteLine("Pojawiła się zielona fajka");
-<<<<<<< HEAD
-=======
 		}
 		else
 		{
@@ -136,7 +137,6 @@ class Pit11
 		if (zielonaFajka.Displayed)
 		{
 			Console.WriteLine("Pojawiła się zielona fajka");
->>>>>>> db5f900ab29f19c7cca20ff0e1ee39775890c311
 		}
 		else
 		{
@@ -185,6 +185,7 @@ class Pit11
 		}
 
 		textbox = driver.FindElement(By.Name("reason"));
+		// wprowadzic zaczytywaniw co jest w textboxie
 		textbox.Clear();
 		textbox.SendKeys("KOREKTA");
 		Thread.Sleep(2000);
@@ -258,104 +259,276 @@ class Pit11
 		Console.WriteLine(radioButton.GetAttribute("checked"));
 
 		//inne przychody
+		//scroll down
 
-		checkbox = driver.FindElement(By.CssSelector("Przychody3a DzialalnoscGospodarcza"));
-		checkbox.Click();
-		Console.WriteLine(checkbox.GetAttribute("value"));
-		
-		checkbox = driver.FindElement(By.Id("Przychody:RentyEmerytury"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:PapieryWartosciowe"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:RyczaltDzialalnosc"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:SprzedazNieruchomosciDo2009"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:SprzedazNieruchomosciOd2009"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:NajemDzierzawaOgolne"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:NajemDzierzawaRyczalt"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:DzialySpecjalne"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:MaloletnieDzieci"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:ZbycieRzeczy"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:InneZPIT8C"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:Inne"));
-		checkbox.Click();
-		checkbox.Click();
-		checkbox = driver.FindElement(By.Id("Przychody:Zagranica"));
-		checkbox.Click();
-		checkbox.Click();
-
-
-
-
-
-
-
-
-
+		Actions builder = new Actions(driver);
+		builder.SendKeys(Keys.PageDown).Build().Perform();
 		Thread.Sleep(2000);
 
-		//czy chcesz zlozyc zeznanie
-
-		radioButton = driver.FindElement(By.CssSelector("#zeznanie"));
-		radioButton.Click();
-		Thread.Sleep(2000);
-		Console.WriteLine("zlozenie zeznania");
-		zielonaFajka = driver.FindElement(By.CssSelector("#correctPipe"));
-		if (zielonaFajka.Displayed)
-		{
-			Console.WriteLine("Pojawiła się zielona fajka");
-		}
-		else
-		{
-			Console.WriteLine("Nie pojawiła się zielona fajka");
-		}
-		
-		// zlozenie korekty
-
-		radioButton = driver.FindElement(By.CssSelector("#correct"));
-		radioButton.Click();
-		Thread.Sleep(2000);
-		Console.WriteLine("zlozenie korekty zeznania");
-		zielonaFajka = driver.FindElement(By.CssSelector("#correctPipe"));
-		if (zielonaFajka.Displayed)
-		{
-			Console.WriteLine("Pojawiła się zielona fajka");
-		}
-		else
-		{
-			Console.WriteLine("Nie pojawila sie zielona fajka");
-		}
-		informator = driver.FindElement(By.CssSelector("fieldset.form_group:nth-child(3) > div:nth-child(2) > a:nth-child(5) > img:nth-child(1)"));
+		checkbox = driver.FindElement(By.Id("Przychody:DzialalnoscGospodarcza"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:DzialalnoscGospodarcza"));
 		informator.Click();
 		if (informator.Enabled)
 		{
-			Console.WriteLine("Pojawiła się informacja");
+			Console.WriteLine("Okienko z informacją otworzyło się");
 			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
 			informator.Click();
+
 		}
 		else
 		{
 			Console.WriteLine("Brak dostępu");
 		}
+		checkbox.Click();
+		checkbox.Click();
+		Thread.Sleep(2000);
+
+		checkbox = driver.FindElement(By.Id("Przychody:RentyEmerytury"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:RentyEmerytury"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+
+		checkbox = driver.FindElement(By.Id("Przychody:PapieryWartosciowe"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:PapieryWartosciowe"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+
+		checkbox = driver.FindElement(By.Id("Przychody:RyczaltDzialalnosc"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:RyczaltDzialalnosc"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+
+
+
+		checkbox = driver.FindElement(By.Id("Przychody:SprzedazNieruchomosciDo2009"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:SprzedazNieruchomosciDo2009"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+
+		checkbox = driver.FindElement(By.Id("Przychody:SprzedazNieruchomosciOd2009"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:SprzedazNieruchomosciOd2009"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+
+		checkbox = driver.FindElement(By.Id("Przychody:NajemDzierzawaOgolne"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:NajemDzierzawaOgolne"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+		checkbox = driver.FindElement(By.Id("Przychody:NajemDzierzawaRyczalt"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:NajemDzierzawaRyczalt"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+
+		checkbox = driver.FindElement(By.Id("Przychody:DzialySpecjalne"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:DzialySpecjalne"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+
+		checkbox = driver.FindElement(By.Id("Przychody:MaloletnieDzieci"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:MaloletnieDzieci"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+
+		checkbox = driver.FindElement(By.Id("Przychody:ZbycieRzeczy"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		
+		checkbox = driver.FindElement(By.Id("Przychody:InneZPIT8C"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:InneZPIT8C"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+
+		checkbox = driver.FindElement(By.Id("Przychody:Inne"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:Inne"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+
+		checkbox = driver.FindElement(By.Id("Przychody:Zagranica"));
+		checkbox.Click();
+		Console.WriteLine(checkbox.GetAttribute("checked"));
+		informator = driver.FindElement(By.Id("hPrzychody:Zagranica"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		checkbox.Click();
+		Thread.Sleep(2000);
+
+		
 
 
 

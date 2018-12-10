@@ -10,6 +10,8 @@ C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.csproj.CoreCompileInp
 C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.csproj.CopyComplete
 C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.exe
 C:\Users\ksian\source\repos\pit 11\pit 11\obj\Debug\pit 11.pdb
+D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.csprojResolveAssemblyReference.cache
+D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.csproj.CoreCompileInputs.cache
 D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\pit 11.exe.config
 D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\pit 11.exe
 D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\pit 11.pdb
@@ -17,8 +19,6 @@ D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\WebDriver.dll
 D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\WebDriver.Support.dll
 D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\WebDriver.xml
 D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\WebDriver.Support.xml
-D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.csprojResolveAssemblyReference.cache
-D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.csproj.CoreCompileInputs.cache
 D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.csproj.CopyComplete
 D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.exe
 D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.pdb
