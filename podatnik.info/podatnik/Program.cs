@@ -1,6 +1,7 @@
 ﻿
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using System.Threading;
 
 class Program
@@ -9,12 +10,14 @@ class Program
 	static IWebElement login;
 	static IWebElement password;
 	static IWebElement zalogowanie;
+	static Actions bot = new Actions(driver);
 	static void Main()
 	{
 		string url = "https://www.podatnik.info/login";
 		
 
 		driver.Navigate().GoToUrl(url);
+		driver.Manage().Window.Maximize();
 
 		login = driver.FindElement(By.Name("login"));
 
@@ -27,6 +30,12 @@ class Program
 		zalogowanie = driver.FindElement(By.ClassName("cta"));
 
 		zalogowanie.Click();
+
+		bot.SendKeys(Keys.PageDown).Build().Perform();
+
+		bot.Click(driver.FindElement(By.ClassName("ws-form-print")));
+
+
 
 		Thread.Sleep(5000);
 

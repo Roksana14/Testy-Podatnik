@@ -18,7 +18,7 @@ class Pit11
 	static IWebElement urzędy;
 	static IWebElement button;
 	static IWebElement checkbox;
-	
+	static IWebElement walidator;
 
 
 
@@ -28,6 +28,7 @@ class Pit11
 		string url = "https://pit.podatnik.info/Home/WizFormMode";
 
 		driver.Navigate().GoToUrl(url);
+		driver.Manage().Window.Maximize();
 
 		//indywidualnie
 		radioButton = driver.FindElement(By.CssSelector("#rd1"));
@@ -263,13 +264,15 @@ class Pit11
 
 		Actions builder = new Actions(driver);
 		builder.SendKeys(Keys.PageDown).Build().Perform();
-		Thread.Sleep(2000);
 
+		Thread.Sleep(1000);
 		checkbox = driver.FindElement(By.Id("Przychody:DzialalnoscGospodarcza"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:DzialalnoscGospodarcza"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -282,14 +285,15 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		checkbox.Click();
-		Thread.Sleep(2000);
+		
 
 		checkbox = driver.FindElement(By.Id("Przychody:RentyEmerytury"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:RentyEmerytury"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -302,14 +306,16 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		Thread.Sleep(2000);
+		
 		
 
 		checkbox = driver.FindElement(By.Id("Przychody:PapieryWartosciowe"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:PapieryWartosciowe"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -322,14 +328,16 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		Thread.Sleep(2000);
+		
 		
 
 		checkbox = driver.FindElement(By.Id("Przychody:RyczaltDzialalnosc"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:RyczaltDzialalnosc"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -342,15 +350,16 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		Thread.Sleep(2000);
-
+		
 
 
 		checkbox = driver.FindElement(By.Id("Przychody:SprzedazNieruchomosciDo2009"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:SprzedazNieruchomosciDo2009"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -363,14 +372,16 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		Thread.Sleep(2000);
-		
 
+
+		Thread.Sleep(1000);
 		checkbox = driver.FindElement(By.Id("Przychody:SprzedazNieruchomosciOd2009"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:SprzedazNieruchomosciOd2009"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -383,14 +394,16 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		Thread.Sleep(2000);
+		
 		
 
 		checkbox = driver.FindElement(By.Id("Przychody:NajemDzierzawaOgolne"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:NajemDzierzawaOgolne"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -403,13 +416,15 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		Thread.Sleep(2000);
-		
+
+		Thread.Sleep(1000);
 		checkbox = driver.FindElement(By.Id("Przychody:NajemDzierzawaRyczalt"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:NajemDzierzawaRyczalt"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -422,14 +437,16 @@ class Pit11
 			Console.WriteLine("Brak dostępu");
 		}
 		checkbox.Click();
-		Thread.Sleep(2000);
+		
 		
 
 		checkbox = driver.FindElement(By.Id("Przychody:DzialySpecjalne"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:DzialySpecjalne"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -447,9 +464,11 @@ class Pit11
 
 		checkbox = driver.FindElement(By.Id("Przychody:MaloletnieDzieci"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:MaloletnieDzieci"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -467,15 +486,19 @@ class Pit11
 
 		checkbox = driver.FindElement(By.Id("Przychody:ZbycieRzeczy"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		checkbox.Click();
 		Thread.Sleep(2000);
 		
 		checkbox = driver.FindElement(By.Id("Przychody:InneZPIT8C"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
+
 		informator = driver.FindElement(By.Id("hPrzychody:InneZPIT8C"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -492,9 +515,11 @@ class Pit11
 
 		checkbox = driver.FindElement(By.Id("Przychody:Inne"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:Inne"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -511,9 +536,11 @@ class Pit11
 
 		checkbox = driver.FindElement(By.Id("Przychody:Zagranica"));
 		checkbox.Click();
+		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 		informator = driver.FindElement(By.Id("hPrzychody:Zagranica"));
 		informator.Click();
+		Thread.Sleep(1000);
 		if (informator.Enabled)
 		{
 			Console.WriteLine("Okienko z informacją otworzyło się");
@@ -528,7 +555,353 @@ class Pit11
 		checkbox.Click();
 		Thread.Sleep(2000);
 
+		checkbox = driver.FindElement(By.Id("ZmianaDanychIdentyfikacyjnych:Tak"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
 		
+
+		//ZAZNACZAM JESZCZE RAZ: czy podatnik uzyskal inne przychody niz uzyskane
+
+		radioButton = driver.FindElement(By.Id("Przychody:Nie"));
+		radioButton.Click();
+		Console.WriteLine(radioButton.GetAttribute("checked"));
+
+		radioButton = driver.FindElement(By.Id("PIT11:1"));
+		radioButton.Click();
+		Thread.Sleep(2000);
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+
+		//trzecia strona
+		//zaznacz odliczenia dotyczace podatnika
+
+
+		//ULGA PRORODZINNA
+		checkbox = driver.FindElement(By.Id("Odliczenia:UlgaProrodzinna"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:UlgaProrodzinna"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+
+		
+
+
+		//INTERNET
+		checkbox = driver.FindElement(By.Id("Odliczenia:Internet"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:Internet"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+	
+		
+
+
+		//IKZE
+		checkbox = driver.FindElement(By.Id("Odliczenia:IKZE"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:IKZE"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+	
+		
+		//ULGA ODSETKOWA
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:OdsetkowaKontynuacja"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:OdsetkowaKontynuacja"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+	
+	
+
+		//ULGA ODSETKOWA 2
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:OdsetkowaKontynuacja"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:OdsetkowaKontynuacja"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		
+		
+
+		//DAROWIZNY
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:Darowizny"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:Darowizny"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		
+		
+
+		//REHABILITACJA
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:Rehabilitacja"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:Rehabilitacja"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+	
+
+		//zwrot nienależnie pobranych świadczeń
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:ZwrotSwiadczen"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:ZwrotSwiadczen"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+	
+
+		//ulga na wyszkolenie uczniów 
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:WyszkolenieUczniow"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:WyszkolenieUczniow"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+	
+		
+		//ulga na pomoc domową
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:PomocDomowa"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+
+		informator = driver.FindElement(By.Id("hOdliczenia:PomocDomowa"));
+		informator.Click();
+		if (informator.Enabled)
+		{
+			Console.WriteLine("Okienko z informacją otworzyło się");
+			informator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			informator.Click();
+
+		}
+		else
+		{
+			Console.WriteLine("Brak dostępu");
+		}
+		
+		
+
+		//inne ulgi od dochodu
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:PomocDomowa"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+		
+
+		//inne ulgi od podatku
+
+		checkbox = driver.FindElement(By.Id("Odliczenia:InneOdPodatku"));
+		checkbox.Click();
+		Thread.Sleep(2000);
+		checkbox.Click();
+		
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		//Formularz pit 11
+		//tu chcialabym zeby sprawdzic czy wyswietla sie naglowek
+		id = driver.FindElement(By.CssSelector("#infoBoxContent > span:nth-child(1)"));
+		Console.WriteLine(id.Text);
+		
+
+		//wpisanie wartosci liczbowej
+
+		for (int i = 29; i < 76; i++)
+		{
+			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
+			{
+				i = 43;
+			}
+			textbox = driver.FindElement(By.Name("" + i + ""));
+			textbox.SendKeys("1234,12");
+			Console.WriteLine(textbox.GetAttribute("value"));
+			textbox.Clear();
+		}
+
+		//wpisanie kropki
+
+		
+		Thread.Sleep(2000);
+		builder.SendKeys(Keys.PageUp).Build().Perform();
+		for (int i = 29; i < 76; i++)
+		{
+			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
+			{
+				i = 43;
+			}
+			if (i == 52)
+			{
+				builder.SendKeys(Keys.PageDown).Build().Perform();
+
+			}
+			
+			textbox = driver.FindElement(By.Name("" + i + ""));
+			textbox.SendKeys(".");
+			Console.WriteLine(textbox.GetAttribute("value"));
+			Thread.Sleep(2000);
+			
+			
+		}
+
+		Thread.Sleep(2000);
+
+
+		// sprawdzenie walidatora
+		builder.SendKeys(Keys.PageUp).Build().Perform();
+		Thread.Sleep(2000);
+		for (int i = 29; i < 76; i++)
+		{
+			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
+			{
+				i = 43;
+			}
+			if (i == 52)
+			{
+				builder.SendKeys(Keys.PageDown).Build().Perform();
+
+			}
+			walidator = driver.FindElement(By.Id("V" + i + ""));
+			walidator.Click();
+			Thread.Sleep(2000);
+			walidator = driver.FindElement(By.ClassName("popper_body"));
+			Console.WriteLine(walidator.Text);
+			walidator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
+			textbox.Clear();
+			Thread.Sleep(2000);
+
+		}
+
+
+
+		//walidator = driver.FindElement(By.ClassName("popper_text error"));
+		//Console.WriteLine(walidator.Text);
+		//builder.MoveToElement(driver.FindElement(By.CssSelector("#V"+ i +" > img"))).Click();
+
 
 
 
