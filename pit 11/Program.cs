@@ -19,8 +19,7 @@ class Pit11
 	static IWebElement button;
 	static IWebElement checkbox;
 	static IWebElement walidator;
-
-
+	private static object losowaLiczba;
 
 	static void Main()
 	{
@@ -844,8 +843,6 @@ class Pit11
 		}
 
 		//wpisanie kropki
-
-		
 		Thread.Sleep(2000);
 		builder.SendKeys(Keys.PageUp).Build().Perform();
 		for (int i = 29; i < 76; i++)
@@ -853,11 +850,7 @@ class Pit11
 			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
 			{
 				i = 43;
-			}
-			if (i == 52)
-			{
 				builder.SendKeys(Keys.PageDown).Build().Perform();
-
 			}
 			
 			textbox = driver.FindElement(By.Name("" + i + ""));
@@ -865,36 +858,78 @@ class Pit11
 			Console.WriteLine(textbox.GetAttribute("value"));
 			Thread.Sleep(2000);
 			
-			
 		}
 
-		Thread.Sleep(2000);
-
-
 		// sprawdzenie walidatora
-		builder.SendKeys(Keys.PageUp).Build().Perform();
 		Thread.Sleep(2000);
+		builder.SendKeys(Keys.PageUp).Build().Perform();
 		for (int i = 29; i < 76; i++)
 		{
 			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
 			{
 				i = 43;
-			}
-			if (i == 52)
-			{
 				builder.SendKeys(Keys.PageDown).Build().Perform();
-
 			}
+
+			Thread.Sleep(2000);
 			walidator = driver.FindElement(By.Id("V" + i + ""));
 			walidator.Click();
 			Thread.Sleep(2000);
 			walidator = driver.FindElement(By.ClassName("popper_body"));
 			Console.WriteLine(walidator.Text);
-			walidator = driver.FindElement(By.CssSelector(".s_close_btn > img:nth-child(1)"));
-			textbox.Clear();
+			walidator = driver.FindElement(By.ClassName("s_close_btn"));
+			walidator.Click();
 			Thread.Sleep(2000);
-
 		}
+
+		//usuwanie walidatora
+		Thread.Sleep(2000);
+		builder.SendKeys(Keys.PageUp).Build().Perform();
+		for (int i = 29; i < 76; i++)
+		{
+			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
+			{
+				i = 43;
+				builder.SendKeys(Keys.PageDown).Build().Perform();
+			}
+			
+			textbox = driver.FindElement(By.Name("" + i + ""));
+			textbox.Clear();
+		}
+
+		//kolejna strona
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		
+
+		
+		textbox = driver.FindElement(By.ClassName("wizardInput"));
+		Random randomizer = new Random();
+		int liczbaLosowa;
+		liczbaLosowa = randomizer.Next(2000);
+		textbox.SendKeys(liczbaLosowa.ToString());
+		Console.WriteLine(textbox.Text);
+
+		//kolejna strona
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		textbox = driver.FindElement(By.Id("txbPierwszeImie"));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -906,6 +941,9 @@ class Pit11
 
 
 
+	}
+	class losuj
+	{
 	}
 }
 
