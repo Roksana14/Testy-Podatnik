@@ -22,3 +22,11 @@ D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\WebDriver.Support.xml
 D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.csproj.CopyComplete
 D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.exe
 D:\testy podatnik\Testy-Podatnik\pit 11\obj\Debug\pit 11.pdb
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\Allure.Commons.dll
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\MimeTypesMap.dll
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\Newtonsoft.Json.dll
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\NUnit.Allure.dll
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\nunit.framework.dll
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\Newtonsoft.Json.xml
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\nunit.framework.pdb
+D:\testy podatnik\Testy-Podatnik\pit 11\bin\Debug\nunit.framework.xml

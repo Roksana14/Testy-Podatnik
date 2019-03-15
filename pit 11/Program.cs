@@ -19,7 +19,8 @@ class Pit11
 	static IWebElement button;
 	static IWebElement checkbox;
 	static IWebElement walidator;
-	private static object losowaLiczba;
+	static Actions builder = new Actions(driver);
+
 
 	static void Main()
 	{
@@ -490,12 +491,12 @@ class Pit11
 		checkbox.Click();
 		Thread.Sleep(2000);
 		
-		checkbox = driver.FindElement(By.Id("Przychody:InneZPIT8C"));
+		checkbox = driver.FindElement(By.Id("Przychody:Inne"));
 		checkbox.Click();
 		Thread.Sleep(1000);
 		Console.WriteLine(checkbox.GetAttribute("checked"));
 
-		informator = driver.FindElement(By.Id("hPrzychody:InneZPIT8C"));
+		informator = driver.FindElement(By.Id("hPrzychody:Inne"));
 		informator.Click();
 		Thread.Sleep(1000);
 		if (informator.Enabled)
@@ -554,11 +555,7 @@ class Pit11
 		checkbox.Click();
 		Thread.Sleep(2000);
 
-		checkbox = driver.FindElement(By.Id("ZmianaDanychIdentyfikacyjnych:Tak"));
-		checkbox.Click();
-		Thread.Sleep(2000);
-		checkbox.Click();
-
+		
 		
 
 		//ZAZNACZAM JESZCZE RAZ: czy podatnik uzyskal inne przychody niz uzyskane
@@ -830,12 +827,26 @@ class Pit11
 
 		//wpisanie wartosci liczbowej
 
-		for (int i = 29; i < 76; i++)
+		for (int i = 29; i < 85; i++)
 		{
 			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
 			{
 				i = 43;
+				builder.SendKeys(Keys.PageDown).Build().Perform();
 			}
+			if (i == 71)
+			{
+				i = 72;
+				builder.SendKeys(Keys.PageDown).Build().Perform();
+				
+			}
+			if (i == 73)
+			{
+				i = 74;
+			}
+			
+
+
 			textbox = driver.FindElement(By.Name("" + i + ""));
 			textbox.SendKeys("1234,12");
 			Console.WriteLine(textbox.GetAttribute("value"));
@@ -845,66 +856,101 @@ class Pit11
 		//wpisanie kropki
 		Thread.Sleep(2000);
 		builder.SendKeys(Keys.PageUp).Build().Perform();
-		for (int i = 29; i < 76; i++)
+		for (int i = 29; i < 85; i++)
 		{
 			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
 			{
 				i = 43;
 				builder.SendKeys(Keys.PageDown).Build().Perform();
 			}
-			
+			if (i == 71)
+			{
+				i = 72;
+				builder.SendKeys(Keys.PageDown).Build().Perform();
+
+			}
+			if (i == 73)
+			{
+				i = 74;
+			}
+
 			textbox = driver.FindElement(By.Name("" + i + ""));
 			textbox.SendKeys(".");
 			Console.WriteLine(textbox.GetAttribute("value"));
-			Thread.Sleep(2000);
+			
 			
 		}
 
-		// sprawdzenie walidatora
-		Thread.Sleep(2000);
-		builder.SendKeys(Keys.PageUp).Build().Perform();
-		for (int i = 29; i < 76; i++)
-		{
-			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
-			{
-				i = 43;
-				builder.SendKeys(Keys.PageDown).Build().Perform();
-			}
+		//// sprawdzenie walidatora
+		
+		//builder.SendKeys(Keys.PageUp).Build().Perform();
+		//for (int i = 29; i < 85; i++)
+		//{
+		//	if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
+		//	{
+		//		i = 43;
+				
+		//	}
+		//	if (i == 71)
+		//	{
+		//		i = 72;
+		//		builder.SendKeys(Keys.PageDown).Build().Perform();
 
-			Thread.Sleep(2000);
-			walidator = driver.FindElement(By.Id("V" + i + ""));
-			walidator.Click();
-			Thread.Sleep(2000);
-			walidator = driver.FindElement(By.ClassName("popper_body"));
-			Console.WriteLine(walidator.Text);
-			walidator = driver.FindElement(By.ClassName("s_close_btn"));
-			walidator.Click();
-			Thread.Sleep(2000);
-		}
+		//	}
+		//	if (i == 73)
+		//	{
+		//		i = 74;
+		//	}
+		//	if (i == 75 && i == 77 && i==79)
+		//    {
+		//		i = 74;
+		//    }
+
+		//	Thread.Sleep(2000);
+		//	walidator = driver.FindElement(By.Id("V" + i + ""));
+		//	walidator.Click();
+		//	Thread.Sleep(2000);
+		//	walidator = driver.FindElement(By.ClassName("popper_body"));
+		//	Console.WriteLine(walidator.Text);
+		//	walidator = driver.FindElement(By.ClassName("s_close_btn"));
+		//	walidator.Click();
+		//	Thread.Sleep(2000);
+		//}
+		
 
 		//usuwanie walidatora
 		Thread.Sleep(2000);
 		builder.SendKeys(Keys.PageUp).Build().Perform();
-		for (int i = 29; i < 76; i++)
+		for (int i = 29; i < 85; i++)
 		{
 			if (i == 39) // omijam niedziałające pola aby przejsc droge, trzeba poprawic
 			{
 				i = 43;
 				builder.SendKeys(Keys.PageDown).Build().Perform();
 			}
-			
+			if (i == 71)
+			{
+				i = 72;
+				builder.SendKeys(Keys.PageDown).Build().Perform();
+
+			}
+			if (i == 73)
+			{
+				i = 74;
+			}
+
 			textbox = driver.FindElement(By.Name("" + i + ""));
 			textbox.Clear();
 		}
 
-		//kolejna strona
 
 		button = driver.FindElement(By.CssSelector("#forward_btn"));
 		button.Click();
 
-		
 
-		
+		//kolejna strona - DANE OSOBOWE
+
+
 		textbox = driver.FindElement(By.ClassName("wizardInput"));
 		Random randomizer = new Random();
 		int liczbaLosowa;
@@ -917,17 +963,106 @@ class Pit11
 		button = driver.FindElement(By.CssSelector("#forward_btn"));
 		button.Click();
 
+		// PIERWSZE IMIĘ
 		textbox = driver.FindElement(By.Id("txbPierwszeImie"));
+		textbox.SendKeys("ADAM");
 
+		//NAZWISKO
+		textbox = driver.FindElement(By.Id("txbNazwisko"));
+		textbox.SendKeys("KOWALSKI");
 
+		//PESEL
+		textbox = driver.FindElement(By.Id("txbPESEL"));
+		textbox.SendKeys("97010118375");
 
+		//EMAIL
+		textbox = driver.FindElement(By.Id("email"));
+		textbox.SendKeys("ak@poczta.onet.pl");
 
+		//TELEFON
+		textbox = driver.FindElement(By.Id("phone"));
+		textbox.SendKeys("111111111");
 
+		//KOD POCZTOWY
+		textbox = driver.FindElement(By.Id("txbKodPocz"));
+		textbox.SendKeys("00-006");
 
+		//NUMER DOMU
+		textbox = driver.FindElement(By.Id("txbNrDomu"));
+		textbox.SendKeys("4");
 
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
 
+		//PODGLĄD PIT
 
+		builder.SendKeys(Keys.PageDown).Build().Perform();
 
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		//DOCHODY
+		int a, b;
+
+		textbox = driver.FindElement(By.Id("35"));
+		a = randomizer.Next(2000);
+		textbox.SendKeys(a.ToString());
+		Console.WriteLine(textbox.Text);
+
+		textbox = driver.FindElement(By.Id("39"));
+		b = randomizer.Next(3000);
+		textbox.SendKeys(b.ToString());
+		Console.WriteLine(textbox.Text);
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		//LOGOWANIE
+
+		button = driver.FindElement(By.CssSelector("#leftButton2Img"));
+		button.Click();
+
+		//login
+		textbox = driver.FindElement(By.Id("loginAdresEmail"));
+		textbox.SendKeys("testes1996.1996@wp.pl");
+
+		//haslo
+		textbox = driver.FindElement(By.Id("loginPassword"));
+		textbox.SendKeys("tester1");
+
+		//przycisk logowania
+		button = driver.FindElement(By.Id("rightButtonText"));
+		button.Click();
+
+		
+		////kwota przychodu z zeszlego roku
+		//textbox = driver.FindElement(By.Id("incomeValuePayer"));
+		//int c = randomizer.Next(6000);
+		//textbox.SendKeys(c.ToString());
+		//Console.WriteLine(textbox.Text);
+
+		button = driver.FindElement(By.CssSelector("#forward_btn"));
+		button.Click();
+
+		//PIT WYSŁANY !!
 
 
 
@@ -942,8 +1077,6 @@ class Pit11
 
 
 	}
-	class losuj
-	{
-	}
+
 }
 
